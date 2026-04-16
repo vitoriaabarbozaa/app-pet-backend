@@ -7,7 +7,7 @@ const {
   createPet,
   updatePet,
   deletePet
-} = require('../controllers/petController');
+} = require('../controllers/bookController');
 
 router.get('/', getPets);
 router.get('/:id', getPetById);

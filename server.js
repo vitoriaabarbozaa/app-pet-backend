@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
 
-const petRoutes = require('./routes/petRoutes');
+const bookRoutes = require('./routes/bookRoutes');
 
 const app = express();
 
@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/entries', require('./routes/diaryRoutes'));
-app.use('/api/pets', petRoutes);
+app.use('/api/books', bookRoutes);
 
 mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/pet_diary')
   .then(() => {
