@@ -11,13 +11,12 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.json({ message: 'API do Diário Pet funcionando.' });
+  res.json({ message: 'API da Minha Estante funcionando.' });
 });
 
-app.use('/api/entries', require('./routes/diaryRoutes'));
 app.use('/api/books', bookRoutes);
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/pet_diary')
+mongoose.connect(process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/book_app')
   .then(() => {
     app.listen(process.env.PORT || 3000, () => {
       console.log('Servidor rodando');
