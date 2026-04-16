@@ -2,17 +2,17 @@ const express = require('express');
 const router = express.Router();
 
 const {
-  getPets,
-  getPetById,
-  createPet,
-  updatePet,
-  deletePet
+  getBooks,
+  getBookById,
+  createBook,
+  updateBook,
+  deleteBook
 } = require('../controllers/bookController');
 
-router.get('/', getPets);
-router.get('/:id', getPetById);
-router.post('/', createPet);
-router.put('/:id', updatePet);
-router.delete('/:id', deletePet);
+router.get('/', getBooks);
+router.get('/:id', getBookById);
+router.post('/', createBook);
+router.put('/:id', updateBook);
+router.delete('/:id', deleteBook);
 
 module.exports = router;
